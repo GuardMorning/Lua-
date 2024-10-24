@@ -1,0 +1,14 @@
+--为什么在对表进行添加之后 长度没有变化?
+a3 = {}
+for i = 1, 10 do
+    a3[i] = i
+    print(a3[i])
+end
+print(#a3)--长度是10
+a3["key"] = "val"
+print(a3["key"])--打印val
+for k , v in pairs(a3) do
+    print(k,v)--循环打印的表中含有key val
+end
+print(#a3)--a3的长度还是10
+print(a3["none"])--这个索引为none对应的值不存在 打印nil
