@@ -1,0 +1,11 @@
+--为什么会打印出120?
+function factorial1(n)
+    if n == 0 then
+        return 1
+    else
+        return n * factorial1(n - 1)
+    end
+end
+print(factorial1(5))--这里赋值n=5 跳转至factorial1(n)执行   lua还能这么玩?
+factorial2 = factorial1
+print(factorial2(5))
