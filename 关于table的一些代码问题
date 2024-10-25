@@ -12,3 +12,10 @@ for k , v in pairs(a3) do
 end
 print(#a3)--a3的长度还是10
 print(a3["none"])--这个索引为none对应的值不存在 打印nil
+
+
+--不为空的表输出同时赋值键和值的项是按什么顺序输出的
+tab = {"Hello","World",a=3,b=2,z=3,x=10,y=20,"Good","Bye"}
+for k,v in pairs(tab) do
+    print(k.."  "..v)--只有value的项按key的顺序输出从1开始 
+end
